@@ -495,7 +495,7 @@ export async function runInit(options: InitOptions, version: string): Promise<vo
 	}
 
 	p.log.message(
-		`If you find Sightline useful, star us on GitHub!\n  ${link(pc.cyan("https://github.com/sightline-app/sightline"), "https://github.com/sightline-app/sightline")}`,
+		`If you find Sightline useful, star us on GitHub!\n  ${link(pc.cyan("https://github.com/BoxiangZ/sightline"), "https://github.com/BoxiangZ/sightline")}`,
 	);
 
 	p.outro(pc.green("Setup complete!"));

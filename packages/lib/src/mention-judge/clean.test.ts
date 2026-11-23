@@ -93,9 +93,9 @@ describe("originalSpan", () => {
 	};
 
 	it("maps a passage of the cleaned answer back to the original, markup and all", () => {
-		const answer = "Intro.\n\n1. **Sightline** is best · [MIT](https://github.com/sightline-app/sightline) licensed.\n";
+		const answer = "Intro.\n\n1. **Sightline** is best · [MIT](https://github.com/BoxiangZ/sightline) licensed.\n";
 		expect(span(answer, "Sightline** is best · MIT (github.com) licensed.")).toBe(
-			"Sightline** is best · [MIT](https://github.com/sightline-app/sightline) licensed.",
+			"Sightline** is best · [MIT](https://github.com/BoxiangZ/sightline) licensed.",
 		);
 	});
 

@@ -20,7 +20,7 @@ function openrouterHeaders(): Record<string, string> {
 	return {
 		Authorization: `Bearer ${getCredential("OPENROUTER_API_KEY")}`,
 		"Content-Type": "application/json",
-		"HTTP-Referer": process.env.APP_URL ?? "https://github.com/sightline-app/sightline",
+		"HTTP-Referer": process.env.APP_URL ?? "https://github.com/BoxiangZ/sightline",
 		"X-Title": "Sightline AEO",
 	};
 }

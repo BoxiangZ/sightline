@@ -5,7 +5,7 @@ export const DEFAULT_APP_URL = "http://localhost:3000/";
 
 /** Placeholder origins until the marketing site and docs are published. */
 export const PROJECT_SITE_URL = "https://sightline.example";
-export const PROJECT_GITHUB_URL = "https://github.com/sightline-app/sightline";
+export const PROJECT_GITHUB_URL = "https://github.com/BoxiangZ/sightline";
 export const PROJECT_DOCS_URL = `${PROJECT_SITE_URL}/docs`;
 
 /** Per-provider anchors are appended, so this must stay the page itself, not the docs index. */

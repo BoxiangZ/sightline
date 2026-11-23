@@ -88,7 +88,7 @@ test.describe("Whitelabel branding", () => {
     await expect(page.locator(`a[href="${brandUrl()}"][data-sidebar="menu-button"]`)).toBeVisible({
       timeout: 30_000,
     });
-    await expect(page.locator('a[href="https://github.com/sightline-app/sightline"]')).toHaveCount(0);
+    await expect(page.locator('a[href="https://github.com/BoxiangZ/sightline"]')).toHaveCount(0);
     await expect(page.locator('a[href="https://sightline.example/"]')).toHaveCount(0);
   });
 

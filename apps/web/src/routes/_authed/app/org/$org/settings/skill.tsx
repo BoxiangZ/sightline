@@ -5,7 +5,7 @@ import { useOrganization } from "@/hooks/use-organizations";
 import { pageHead } from "@/lib/route-head";
 
 const INSTALL_COMMAND = "npx skills add sightline-app/sightline";
-const SKILL_URL = "https://github.com/sightline-app/sightline/tree/main/skills/aeo";
+const SKILL_URL = "https://github.com/BoxiangZ/sightline/tree/main/skills/aeo";
 const LAUNCH_POST_URL = "https://sightline.example/blog/aeo-skill";
 
 const EXAMPLE_ASKS = [

@@ -8,7 +8,7 @@ abstract: >-
 type: software
 authors:
   - name: Sightline contributors
-repository-code: https://github.com/sightline-app/sightline
+repository-code: https://github.com/BoxiangZ/sightline
 url: https://sightline.example
 license: MIT
 keywords:

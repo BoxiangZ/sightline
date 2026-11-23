@@ -6,11 +6,11 @@
 		"version": "1.1.0",
 		"contact": {
 			"name": "Sightline",
-			"url": "https://github.com/sightline-app/sightline"
+			"url": "https://github.com/BoxiangZ/sightline"
 		},
 		"license": {
 			"name": "MIT",
-			"url": "https://github.com/sightline-app/sightline/blob/main/LICENSE.md"
+			"url": "https://github.com/BoxiangZ/sightline/blob/main/LICENSE.md"
 		}
 	},
 	"servers": [

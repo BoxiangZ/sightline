@@ -114,7 +114,7 @@ test.describe("Local features", () => {
     // The Sightline wordmark, not a whitelabel icon + name.
     await expect(page.getByText("sightline", { exact: true }).first()).toBeVisible({ timeout: 30_000 });
     // Self-hosters get the version and project links a whitelabel build hides.
-    await expect(page.locator('a[href="https://github.com/sightline-app/sightline"]')).toBeVisible();
+    await expect(page.locator('a[href="https://github.com/BoxiangZ/sightline"]')).toBeVisible();
   });
 
   test("the web manifest carries the Sightline icons", async ({ request }) => {

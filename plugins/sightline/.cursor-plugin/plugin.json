@@ -7,7 +7,7 @@
     "name": "Sightline"
   },
   "homepage": "https://sightline.example",
-  "repository": "https://github.com/sightline-app/sightline",
+  "repository": "https://github.com/BoxiangZ/sightline",
   "license": "MIT",
   "keywords": ["ai visibility", "aeo", "geo", "seo", "brand monitoring", "mcp"],
   "logo": "assets/logo.svg"

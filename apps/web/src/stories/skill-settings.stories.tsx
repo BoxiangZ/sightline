@@ -37,7 +37,7 @@ export const Install: Story = {
 		await expect(await canvas.findByText("npx skills add sightline-app/sightline")).toBeVisible();
 		await expect(canvas.getByRole("link", { name: "skills/aeo" })).toHaveAttribute(
 			"href",
-			"https://github.com/sightline-app/sightline/tree/main/skills/aeo",
+			"https://github.com/BoxiangZ/sightline/tree/main/skills/aeo",
 		);
 	},
 };
