@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "sightline": {
+      "url": "https://app.sightline.example/api/mcp"
+    }
+  }
+}

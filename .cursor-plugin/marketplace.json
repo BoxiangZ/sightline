@@ -1,0 +1,16 @@
+{
+  "name": "sightline",
+  "owner": {
+    "name": "Sightline"
+  },
+  "metadata": {
+    "description": "Official Sightline plugins for Cursor"
+  },
+  "plugins": [
+    {
+      "name": "sightline",
+      "source": "./plugins/sightline",
+      "description": "Track how ChatGPT, Claude, Perplexity, Gemini and Google AI Overviews mention and cite your brand"
+    }
+  ]
+}

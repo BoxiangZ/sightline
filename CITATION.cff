@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+title: Sightline
+abstract: >-
+  Sightline is a self-hosted AI visibility platform. It tracks how AI answer
+  engines mention, cite, and describe brands. The project started as a copy of
+  Elmo (MIT) and is developed independently.
+type: software
+authors:
+  - name: Sightline contributors
+repository-code: https://github.com/sightline-app/sightline
+url: https://sightline.example
+license: MIT
+keywords:
+  - answer-engine-optimization
+  - generative-engine-optimization
+  - ai-visibility
