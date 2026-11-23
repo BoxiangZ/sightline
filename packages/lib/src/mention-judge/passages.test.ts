@@ -36,7 +36,9 @@ describe("quoteOptions", () => {
 
 	it("offers a heading together with the description under it", () => {
 		const options = quoteOptions(answer, matcher(sightline), matcher(peec));
-		expect(options[0].text).toBe("1. Sightline Best overall starting point An MIT-licensed platform that tracks mentions.");
+		expect(options[0].text).toBe(
+			"1. Sightline Best overall starting point An MIT-licensed platform that tracks mentions.",
+		);
 	});
 
 	it("stops at the next company, so one company's quote never carries another's tone", () => {
@@ -45,7 +47,9 @@ describe("quoteOptions", () => {
 	});
 
 	it("offers a table row on its own", () => {
-		expect(quoteOptions(answer, matcher(sightline), matcher(peec)).map((option) => option.text)).toContain("| Sightline | MIT |");
+		expect(quoteOptions(answer, matcher(sightline), matcher(peec)).map((option) => option.text)).toContain(
+			"| Sightline | MIT |",
+		);
 	});
 });
 

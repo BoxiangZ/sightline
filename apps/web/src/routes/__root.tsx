@@ -6,7 +6,7 @@ import titanOneFont from "@fontsource/titan-one/files/titan-one-latin-400-normal
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import type { QueryClient } from "@tanstack/react-query";
 import { createRootRouteWithContext, HeadContent, Outlet, Scripts, useLocation } from "@tanstack/react-router";
-import { DEFAULT_APP_ICON, BRAND_THEME_COLOR } from "@workspace/config/constants";
+import { BRAND_THEME_COLOR, DEFAULT_APP_ICON } from "@workspace/config/constants";
 import type { MissingEnvVar } from "@workspace/config/env";
 import { isManagedHosted, legalUrl } from "@workspace/config/legal";
 import type { DeploymentMode } from "@workspace/config/types";
@@ -124,7 +124,7 @@ export const Route = createRootRouteWithContext<RouterContext>()({
 				{ rel: "stylesheet", href: appCss },
 				{ rel: "manifest", href: "/api/manifest" },
 				// Whitelabel uses its own icon URL for both favicon and iOS touch;
-				// Sightline default uses the committed SVG + opaque 180×180 PNG.
+				// The Sightline default uses the committed SVG.
 				...(hasCustomIcon && branding?.icon
 					? [
 							{ rel: "icon", type: "image/png", href: branding.icon },
@@ -135,7 +135,7 @@ export const Route = createRootRouteWithContext<RouterContext>()({
 							// /favicon.ico and /apple-touch-icon.png 404 on whitelabel deployments.
 							{ rel: "icon", type: "image/svg+xml", href: DEFAULT_APP_ICON },
 							{ rel: "apple-touch-icon", href: DEFAULT_APP_ICON },
-						],
+						]),
 			],
 			scripts,
 		};

@@ -119,8 +119,8 @@ function AuthorizePage() {
 				{client.loopbackOnly && (
 					<Alert>
 						<AlertDescription>
-							This client runs on your computer, so Sightline can't tell which program is asking. Continue only if you just
-							started this from a client you trust.
+							This client runs on your computer, so Sightline can't tell which program is asking. Continue only if you
+							just started this from a client you trust.
 						</AlertDescription>
 					</Alert>
 				)}

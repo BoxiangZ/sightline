@@ -21,7 +21,7 @@ export const CRISP_WEBSITE_ID = "";
 export const BRAND_COLOR = "#2563eb"; // blue-600
 export const BRAND_FONT = "Titan One";
 export const BRAND_THEME_COLOR = "#2563eb";
-export const BRAND_BACKGROUND_COLOR = "#ffffff";;
+export const BRAND_BACKGROUND_COLOR = "#ffffff";
 
 /**
  * Whitelabel overrides these via VITE_CHART_COLORS. Hue order is load-bearing:

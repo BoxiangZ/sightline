@@ -1,6 +1,7 @@
 export const REPORT_SCHEMA_VERSION = 1;
 
-export const DEFAULT_USER_AGENT = "SightlineBot/1.0 (+https://sightline.example/docs/user-guide/agent-readiness-audit#sightlinebot)";
+export const DEFAULT_USER_AGENT =
+	"SightlineBot/1.0 (+https://sightline.example/docs/user-guide/agent-readiness-audit#sightlinebot)";
 
 export type CheckStatus = "pass" | "warn" | "fail" | "info" | "not_checked";
 

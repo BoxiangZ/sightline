@@ -1,7 +1,7 @@
 /** @jsxRuntime automatic */
 // The pragma keeps this file rendering under tsx (the brand-kit script), which
 // compiles it outside any tsconfig that sets the automatic JSX runtime.
-import { DEFAULT_APP_NAME, BRAND_COLOR } from "@workspace/config/constants";
+import { BRAND_COLOR, DEFAULT_APP_NAME } from "@workspace/config/constants";
 import type { ReactNode } from "react";
 
 export const ACCENT_COLORS = ["#2563eb", "#f4d35e", "#ee964b", "#f95738"];

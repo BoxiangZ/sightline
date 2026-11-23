@@ -67,7 +67,14 @@ export function NavAppInfo() {
 				)}
 				<Tooltip>
 					<TooltipTrigger
-						render={<a href="https://github.com/sightline-app/sightline" target="_blank" rel="noreferrer" className={linkClass} />}
+						render={
+							<a
+								href="https://github.com/sightline-app/sightline"
+								target="_blank"
+								rel="noreferrer"
+								className={linkClass}
+							/>
+						}
 					>
 						<IconBrandGithub className="size-4" />
 					</TooltipTrigger>

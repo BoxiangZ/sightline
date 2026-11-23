@@ -22,4 +22,3 @@ describe("getFanoutSupport", () => {
 		expect(support("gemini:oxylabs:online").status).toBe("unknown");
 	});
 });
-

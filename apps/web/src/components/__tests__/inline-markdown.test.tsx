@@ -6,7 +6,9 @@ const render = (markdown: string) => renderToStaticMarkup(<InlineMarkdown>{markd
 
 describe("InlineMarkdown", () => {
 	it("flattens lists, headings and paragraphs into one run of text", () => {
-		const html = render("### Best options\n\n1. **Sightline** is open source.\n2. Peec is hosted.\n\nBoth track citations.");
+		const html = render(
+			"### Best options\n\n1. **Sightline** is open source.\n2. Peec is hosted.\n\nBoth track citations.",
+		);
 		expect(html.replace(/\s+/g, " ").trim()).toBe(
 			"<strong>Best options</strong> — <strong>Sightline</strong> is open source. Peec is hosted. Both track citations.",
 		);
