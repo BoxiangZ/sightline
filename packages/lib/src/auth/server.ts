@@ -117,6 +117,10 @@ export function createAuth(options?: CreateAuthOptions) {
 		basePath: "/api/auth",
 		trustedOrigins: origins,
 
+		// Cookies are scoped to the host, not the port, so the default prefix would
+		// collide with another better-auth app served from the same host.
+		advanced: { cookiePrefix: "sightline" },
+
 		// The default memory store is per-instance and resets on cold starts.
 		rateLimit: { storage: "database" },
 

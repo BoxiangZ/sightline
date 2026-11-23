@@ -7,7 +7,7 @@
  */
 
 import { IconBrandGoogle } from "@tabler/icons-react";
-import { createFileRoute, Link, useNavigate, useRouteContext } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect, useNavigate, useRouteContext } from "@tanstack/react-router";
 import { CLOUD_ENTRY_PRICE_USD } from "@workspace/config/plans";
 import type { ClientConfig } from "@workspace/config/types";
 import { authClient } from "@workspace/lib/auth/client";
@@ -27,6 +27,15 @@ import { safeReturnTo } from "@/lib/return-to";
 import { buildTitle, getAppName } from "@/lib/route-head";
 
 export const Route = createFileRoute("/auth/register")({
+	beforeLoad: () => {
+		if (
+			typeof window === "undefined" &&
+			process.env.DEPLOYMENT_MODE === "local" &&
+			process.env.DEV_AUTO_LOGIN === "1"
+		) {
+			throw redirect({ to: "/auth/dev-login" });
+		}
+	},
 	validateSearch: (search: Record<string, unknown>): { returnTo?: string } & AttributionParams => ({
 		...(typeof search.returnTo === "string" ? { returnTo: search.returnTo } : {}),
 		...attributionParams(search),

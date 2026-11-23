@@ -68,12 +68,7 @@ export function NavAppInfo() {
 				<Tooltip>
 					<TooltipTrigger
 						render={
-							<a
-								href="https://github.com/BoxiangZ/sightline"
-								target="_blank"
-								rel="noreferrer"
-								className={linkClass}
-							/>
+							<a href="https://github.com/BoxiangZ/sightline" target="_blank" rel="noreferrer" className={linkClass} />
 						}
 					>
 						<IconBrandGithub className="size-4" />

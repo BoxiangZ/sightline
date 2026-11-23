@@ -60,6 +60,13 @@ export const Route = createFileRoute("/auth/login")({
 		if (search.sig) return;
 		const viewer = await context.queryClient.fetchQuery({ ...viewerQuery, staleTime: 0 }).catch(() => null);
 		if (viewer) throw redirect({ href: safeReturnTo(search.returnTo), reloadDocument: true });
+		if (
+			typeof window === "undefined" &&
+			process.env.DEPLOYMENT_MODE === "local" &&
+			process.env.DEV_AUTO_LOGIN === "1"
+		) {
+			throw redirect({ to: "/auth/dev-login" });
+		}
 	},
 	head: ({ match }) => {
 		const appName = getAppName(match);
