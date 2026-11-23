@@ -13,6 +13,17 @@ export const Route = createFileRoute("/")({
 	beforeLoad: async ({ context, search }) => {
 		const session = await getSession();
 
+		// Local dev convenience: with DEV_AUTO_LOGIN=1, open the dashboard instead
+		// of the sign-in form. Server-side only; the flag is never sent to clients.
+		if (
+			!session &&
+			typeof window === "undefined" &&
+			process.env.DEPLOYMENT_MODE === "local" &&
+			process.env.DEV_AUTO_LOGIN === "1"
+		) {
+			throw redirect({ to: "/auth/dev-login" });
+		}
+
 		if (session) {
 			throw redirect({ to: "/app" });
 		}

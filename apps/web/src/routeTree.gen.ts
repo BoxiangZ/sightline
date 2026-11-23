@@ -18,6 +18,7 @@ import { Route as AuthedChangePasswordRouteImport } from './routes/_authed/chang
 import { Route as AuthedChoosePlanRouteImport } from './routes/_authed/choose-plan'
 import { Route as AuthedReportsRouteImport } from './routes/_authed/reports'
 import { Route as AuthAuthorizeRouteImport } from './routes/auth/authorize'
+import { Route as AuthDevLoginRouteImport } from './routes/auth/dev-login'
 import { Route as AuthForgotPasswordRouteImport } from './routes/auth/forgot-password'
 import { Route as AuthLoginRouteImport } from './routes/auth/login'
 import { Route as AuthLogoutRouteImport } from './routes/auth/logout'
@@ -145,6 +146,11 @@ const AuthedReportsRoute = AuthedReportsRouteImport.update({
 const AuthAuthorizeRoute = AuthAuthorizeRouteImport.update({
   id: '/auth/authorize',
   path: '/auth/authorize',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthDevLoginRoute = AuthDevLoginRouteImport.update({
+  id: '/auth/dev-login',
+  path: '/auth/dev-login',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthForgotPasswordRoute = AuthForgotPasswordRouteImport.update({
@@ -618,6 +624,7 @@ export interface FileRoutesByFullPath {
   '/choose-plan': typeof AuthedChoosePlanRoute
   '/reports': typeof AuthedReportsRouteWithChildren
   '/auth/authorize': typeof AuthAuthorizeRoute
+  '/auth/dev-login': typeof AuthDevLoginRoute
   '/auth/forgot-password': typeof AuthForgotPasswordRoute
   '/auth/login': typeof AuthLoginRoute
   '/auth/logout': typeof AuthLogoutRoute
@@ -708,6 +715,7 @@ export interface FileRoutesByTo {
   '/change-password': typeof AuthedChangePasswordRoute
   '/choose-plan': typeof AuthedChoosePlanRoute
   '/auth/authorize': typeof AuthAuthorizeRoute
+  '/auth/dev-login': typeof AuthDevLoginRoute
   '/auth/forgot-password': typeof AuthForgotPasswordRoute
   '/auth/login': typeof AuthLoginRoute
   '/auth/logout': typeof AuthLogoutRoute
@@ -800,6 +808,7 @@ export interface FileRoutesById {
   '/_authed/choose-plan': typeof AuthedChoosePlanRoute
   '/_authed/reports': typeof AuthedReportsRouteWithChildren
   '/auth/authorize': typeof AuthAuthorizeRoute
+  '/auth/dev-login': typeof AuthDevLoginRoute
   '/auth/forgot-password': typeof AuthForgotPasswordRoute
   '/auth/login': typeof AuthLoginRoute
   '/auth/logout': typeof AuthLogoutRoute
@@ -895,6 +904,7 @@ export interface FileRouteTypes {
     | '/choose-plan'
     | '/reports'
     | '/auth/authorize'
+    | '/auth/dev-login'
     | '/auth/forgot-password'
     | '/auth/login'
     | '/auth/logout'
@@ -985,6 +995,7 @@ export interface FileRouteTypes {
     | '/change-password'
     | '/choose-plan'
     | '/auth/authorize'
+    | '/auth/dev-login'
     | '/auth/forgot-password'
     | '/auth/login'
     | '/auth/logout'
@@ -1076,6 +1087,7 @@ export interface FileRouteTypes {
     | '/_authed/choose-plan'
     | '/_authed/reports'
     | '/auth/authorize'
+    | '/auth/dev-login'
     | '/auth/forgot-password'
     | '/auth/login'
     | '/auth/logout'
@@ -1166,6 +1178,7 @@ export interface RootRouteChildren {
   AuthedRoute: typeof AuthedRouteWithChildren
   DotwellKnownChangePasswordRoute: typeof DotwellKnownChangePasswordRoute
   AuthAuthorizeRoute: typeof AuthAuthorizeRoute
+  AuthDevLoginRoute: typeof AuthDevLoginRoute
   AuthForgotPasswordRoute: typeof AuthForgotPasswordRoute
   AuthLoginRoute: typeof AuthLoginRoute
   AuthLogoutRoute: typeof AuthLogoutRoute
@@ -1264,6 +1277,13 @@ declare module '@tanstack/react-router' {
       path: '/auth/authorize'
       fullPath: '/auth/authorize'
       preLoaderRoute: typeof AuthAuthorizeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth/dev-login': {
+      id: '/auth/dev-login'
+      path: '/auth/dev-login'
+      fullPath: '/auth/dev-login'
+      preLoaderRoute: typeof AuthDevLoginRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth/forgot-password': {
@@ -2087,6 +2107,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthedRoute: AuthedRouteWithChildren,
   DotwellKnownChangePasswordRoute: DotwellKnownChangePasswordRoute,
   AuthAuthorizeRoute: AuthAuthorizeRoute,
+  AuthDevLoginRoute: AuthDevLoginRoute,
   AuthForgotPasswordRoute: AuthForgotPasswordRoute,
   AuthLoginRoute: AuthLoginRoute,
   AuthLogoutRoute: AuthLogoutRoute,
